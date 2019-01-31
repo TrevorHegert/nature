@@ -1,0 +1,23 @@
+{
+  "name": "adrift",
+  "version": "1.0.0",
+  "description": "Adrift Cruising Tours Website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrevorHegert/nature.git"
+  },
+  "author": "Trevor N. Hegert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrevorHegert/nature/issues"
+  },
+  "homepage": "https://github.com/TrevorHegert/nature#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
