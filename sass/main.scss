@@ -3,6 +3,7 @@ $color-primary-light: rgb(110, 210, 215);
 $color-primary-dark: rgb(55, 40, 180);
 
 $color-grey-dark: #777;
+$color-white: #fff;
 
 *,
 *::after,
@@ -57,7 +58,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -154,7 +155,7 @@ body {
 }
 
 .btn--white {
-    background-color: #fff;
+    background-color: $color-white;
     color: $color-grey-dark;
 }
 
@@ -172,7 +173,7 @@ body {
 }
 
 .btn--white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
