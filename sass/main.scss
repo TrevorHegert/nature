@@ -5,6 +5,11 @@ $color-primary-dark: rgb(55, 40, 180);
 $color-grey-dark: #777;
 $color-white: #fff;
 
+$font-normal: 'Poppins',
+sans-serif;
+$font-special: 'Quicksand',
+sans-serif;
+
 *,
 *::after,
 *::before {
@@ -18,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-normal;
     font-weight: 400;
     line-height: 1.7;
     color: $color-grey-dark;
@@ -36,25 +41,25 @@ body {
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 
-.header__logo {
-    height: 3.5rem;
-}
+    &__logo {
+        height: 3.5rem;
+    }
 
-.header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: $font-special;
+    }
 }
 
 .heading-primary {
@@ -66,25 +71,25 @@ body {
     justify-content: center;
     backface-visibility: hidden;
     margin-bottom: 4rem;
-}
 
-.heading-primary--main {
-    display: block;
+    &--main {
+        display: block;
 
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
 
-    animation: moveInLeft 1s ease-out;
-}
+        animation: moveInLeft 1s ease-out;
+    }
 
-.heading-primary--sub {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 1.2rem;
+    &--sub {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 1.2rem;
 
-    animation: moveInRight 1s ease-out;
+        animation: moveInRight 1s ease-out;
+    }
 }
 
 @keyframes moveInLeft {
@@ -131,57 +136,61 @@ body {
     }
 }
 
-.btn:link,
-.btn:visited {
-    font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 4rem;
-    border-radius: 20rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
+.btn {
 
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-}
+    &:link,
+    &:visited {
+        font-family: $font-normal;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        border-radius: 20rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
 
-.btn:active {
-    transform: translateY(-.1rem);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-}
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
+        &::after {
+            transform: scaleX(1.5) scaleY(1.6);
+            opacity: 0;
+        }
+    }
 
-.btn::after {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 20rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
 
-.btn--white::after {
-    background-color: $color-white;
-}
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        color: $color-black;
 
-.btn:hover::after {
-    transform: scaleX(1.5) scaleY(1.6);
-    opacity: 0;
-}
+        &::after {
+            background-color: $color-white;
+        }
+    }
 
-.btn--animated {
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 20rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
 }
