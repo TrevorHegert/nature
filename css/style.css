@@ -68,6 +68,24 @@ body {
     letter-spacing: 1.2rem;
     animation: moveInRight 1s ease-out; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  display: inline-block;
+  background-image: linear-gradient(to right, #6ed2d7, #3728b4);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(-2deg) skewX(15deg) scale(1.2);
+    text-shadow: 0.5rem 1rem 2 rem rgba(0, 0, 0, 0.2); }
+
+.u-center-text {
+  text-align: center; }
+
 .btn:link, .btn:visited {
   font-family: "Poppins", sans-serif;
   display: inline-block;
@@ -146,7 +164,7 @@ body {
   background-image: linear-gradient(to bottom right, rgba(110, 210, 215, 0.7), rgba(55, 40, 180, 0.7)), url("../img/sail2_raw.jpg");
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -160,3 +178,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: "Quicksand", sans-serif; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -16vh; }
