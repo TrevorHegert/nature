@@ -343,6 +343,16 @@ body {
           transform: scale(0.9);
 }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -425,5 +435,12 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -16vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(110, 210, 215, 0.7)), to(rgba(55, 40, 180, 0.7))), url("../img/sail3.jpg");
+  background-image: linear-gradient(to bottom right, rgba(110, 210, 215, 0.7), rgba(55, 40, 180, 0.7)), url("../img/sail3.jpg");
+  background-size: cover;
 }
 /*# sourceMappingURL=main.css.map */
